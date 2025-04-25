@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Lost and Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU=">
+</head>
+<body>
+    <div class="container">
+        <div class="user-header">
+            <h1>Student Dashboard</h1>
+            <p class="user-email" id="userEmailDisplay"></p>
+            
+        </div>
+        <div class="dashboard">
+            <div class="post-form">
+                <h2>Post New Item</h2>
+                <input type="text" id="itemTitle" placeholder="Item Title" required>
+                <textarea id="itemDescription" placeholder="Item Description" required></textarea>
+                <input type="file" id="itemImage" accept="image/*">
+                <p class="form-note">Image (optional)</p>
+                <select id="itemType" required>
+                    <option value="">Select Type</option>
+                    <option value="lost">Lost Item</option>
+                    <option value="found">Found Item</option>
+                </select>
+                <div class="stu">
+                <button class="login-btn" onclick="postItem()">Post Item</button>
+                <button class="chat-btn" onclick="toggleChat()">Chat with Admin</button></div>
+            </div>
+            
+            <h2>Lost and Found Items</h2>
+            <div id="approvedItems" class="items-grid">
+                
+            </div><br>
+            <hr >
+            <h2>My Items</h2>
+            <div id="myItems" class="items-grid">
+                
+            </div><br>
+            <hr>
+        </div>
+          
+        <!-- Chat Modal -->
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <div class="chat-header">
+                    <h2>Chat with Admin</h2>
+                    <button class="close-btn" onclick="toggleChat()">&times;</button>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+            
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="student-script.js"></script>
+</body>
+</html> 

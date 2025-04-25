@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Lost and Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU=">
+</head>
+<body>
+    <div class="container">
+        <div class="user-header">
+            <h1>Admin Dashboard</h1>
+            <p class="user-email" id="userEmailDisplay"></p>
+           
+        </div>
+        <div class="dashboard">
+            <h2>Pending Items</h2>
+            <div id="pendingItems" class="items-grid">
+                <!-- Items will be loaded here -->
+            </div>
+<hr>
+            <h2>Approved Items</h2>
+            <div id="approvedItems" class="items-grid">
+                <!-- Approved items will be loaded here -->
+            </div><hr>
+           
+        </div><br>
+        <div class="stu2"><button class="chat-btn2" onclick="toggleChat()">Chat with Students</button></div>
+        <!-- Chat Modal -->
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <div class="chat-header">
+                    <h2>Chat with Students</h2>
+                    <button class="close-btn" onclick="toggleChat()">&times;</button>
+                </div>
+                <div class="chat-users" id="chatUsers">
+                    <!-- Chat users will be loaded here -->
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be loaded here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin-script.js"></script>
+</body>
+</html> 
